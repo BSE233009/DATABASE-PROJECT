@@ -46,6 +46,4 @@ The design ensures compliance with data protection laws such as GDPR. It include
 ## Conclusion
 The **Credit Scoring and Loan Approval System** is an efficient, scalable, and secure solution for managing the loan approval process. It minimizes data redundancy, ensures data integrity, and incorporates necessary security measures, providing a trustworthy and transparent system for financial institutions. This design enables better decision-making while protecting sensitive applicant data.
 
----
 
-Feel free to clone or contribute to this project!
