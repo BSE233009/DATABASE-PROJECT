@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Input</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #550be0, #DFFF00);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        main {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #550be0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        form input,
+        form textarea,
+        form select,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: all 0.3s;
+        }
+
+        form input:focus,
+        form textarea:focus,
+        form select:focus {
+            outline: none;
+            border: 1px solid #550be0;
+            box-shadow: 0 0 5px rgba(85, 11, 224, 0.5);
+        }
+
+        form textarea {
+            resize: none;
+        }
+
+        form button {
+            background-color: #550be0;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        form button:hover {
+            background-color: #DFFF00;
+            color: #550be0;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        footer a {
+            color: #550be0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #DFFF00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Credit Scoring and Loan Management System</h1>
+    </header>
+    <main>
+        <h2>Applicant Information</h2>
+        <form action="add_applicant.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter address" required></textarea>
+
+            <label for="contact">Contact Number:</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter contact number" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+
+            <label for="employment">Employment Status:</label>
+            <select id="employment" name="employment" required>
+                <option value="Employed">Employed</option>
+                <option value="Unemployed">Unemployed</option>
+                <option value="Self-employed">Self-employed</option>
+            </select>
+
+            <label for="income">Annual Income:</label>
+            <input type="number" id="income" name="income" placeholder="Enter annual income" step="0.01" required>
+
+            <label for="credit_score">Credit Score:</label>
+            <input type="number" id="credit_score" name="credit_score" placeholder="Enter credit score" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <footer>
+            <p>Need help? <a href="contact.html">Contact Support</a></p>
+        </footer>
+    </main>
+</body>
+</html>
